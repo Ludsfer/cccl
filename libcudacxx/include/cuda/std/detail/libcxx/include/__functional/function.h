@@ -12,7 +12,7 @@
 #define _LIBCUDACXX___FUNCTIONAL_FUNCTION_H
 
 #ifndef __cuda_std__
-#  include <__config>
+#   include <__config>
 #endif // __cuda_std__
 
 #if defined(_CCCL_IMPLICIT_SYSTEM_HEADER_GCC)
@@ -44,10 +44,10 @@
 #include "../__utility/move.h"
 #include "../__utility/piecewise_construct.h"
 #include "../__utility/swap.h"
+#include "../exception"
 #include "../tuple"
 
 #ifndef __cuda_std__
-#include <exception>
 #include <memory>
 #include <new>
 #include <typeinfo>
