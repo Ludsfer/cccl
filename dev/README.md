@@ -1,6 +1,6 @@
 # How to use Windows devcontainers for testing
 
-Containerization on Windows allows users to avoid typical VS IDE bloat and improves testability by isolating the environment. CCCL can provide a way to for developers to access these resources via a simple powershell module. This module helps circumnavigate common pitfalls when getting CUDA to work in WCoW (Windows Containers on Windows.)
+Containerization on Windows allows users to avoid typical VS IDE bloat and improves testability by isolating the environment. CCCL can provide a way for developers to access these resources via a simple powershell module. This module helps circumnavigate common pitfalls when getting CUDA to work in WCoW (Windows Containers on Windows.)
 
 Eventually this could extend to launching containers in WSL and not just Windows to help provide a complete development environment from one machine.
 
