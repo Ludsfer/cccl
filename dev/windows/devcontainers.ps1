@@ -54,10 +54,11 @@ function Get-CCCLDevcontainer {
     }
     Write-Verbose "Discovered $($results.Count) devcontainers"
 
-    $containers = $results
-                    | Where-Object { $_.name -imatch $filter }
-                    | Select-Object -Property name,images
-                    | %{ @{Container = "rapidsai/devcontainers:$($_.name)"; ImageInfo = $_.images } } | Sort-Object -Property Container
+    $containers = $results `
+                    | Where-Object { $_.name -imatch $filter } `
+                    | Select-Object -Property name,images `
+                    | %{ @{Container = "rapidsai/devcontainers:$($_.name)"; ImageInfo = $_.images } } `
+                    | Sort-Object -Property Container
 
     Write-Verbose "Returning $($containers.Count) matching devcontainers"
 
