@@ -7,7 +7,7 @@ function Get-CCCLDevcontainerOptions {
         [switch]$History,
         [switch]$BuildVolume,
         [string]$CTK,
-        [string]$CCCL="$((Get-Item $PSScriptRoot).Parent.Parent)"
+        [string]$CCCL="$((Get-Item $PSScriptRoot).Parent.Parent.FullName)"
     )
 
     $containerConfig = @{
@@ -49,6 +49,7 @@ function Get-CCCLDevcontainerOptions {
         $containerConfig.dockerParams += @('-it')
     }
 
+    Write-Verbose "Mounting $CCCL to C:\cccl"
     $containerConfig.dockerParams += @("--mount", "type=bind,src=$CCCL,dst=C:\cccl")
 
     if ($BuildVolume) {
@@ -57,9 +58,9 @@ function Get-CCCLDevcontainerOptions {
     $containerConfig.dockerParams += @("--volume", "cccl-build:C:\cccl\build:rw")
 
     Write-Verbose "Docker container arguments:"
-    Write-Verbose "$containerConfig.dockerParams"
+    Write-Verbose "$($containerConfig.dockerParams)"
     Write-Verbose "Windows AV exceptions enabled:"
-    Write-Verbose "$containerConfig.disableAV"
+    Write-Verbose "$($containerConfig.disableAV)"
 
     Write-Output $containerConfig
 }
