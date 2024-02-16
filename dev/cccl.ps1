@@ -7,7 +7,9 @@ This script may be used to build and test CCCL projects on Windows. This script 
 system capability and automating away common pitfalls.
 #>
 
+. $PSScriptRoot\windows\admin.ps1
 . $PSScriptRoot\windows\config.ps1
 . $PSScriptRoot\windows\devcontainers.ps1
 . $PSScriptRoot\windows\options.ps1
 . $PSScriptRoot\windows\run.ps1
+. $PSScriptRoot\windows\docker.ps1
