@@ -324,6 +324,7 @@ _CCCL_DIAG_SUPPRESS_MSVC(4848)
 
 #include "__assert" // all public C++ headers provide the assertion handler
 #include "__ranges/access.h"
+#include "__ranges/all.h"
 #include "__ranges/concepts.h"
 #include "__ranges/dangling.h"
 #include "__ranges/data.h"
