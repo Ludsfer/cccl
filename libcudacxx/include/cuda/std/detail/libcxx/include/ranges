@@ -353,6 +353,7 @@ _CCCL_DIAG_SUPPRESS_MSVC(4848)
 #include "__ranges/transform_view.h"
 #include "__ranges/view_interface.h"
 #include "__ranges/views.h"
+#include "__ranges/zip_view.h"
 
 // standard-mandated includes
 #include "version"
